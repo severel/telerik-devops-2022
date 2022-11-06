@@ -17,9 +17,10 @@ Feel free to fork this repository and work in the forked version.
 * Code lint and style
 * Code unit tests
 * Check for hardcoded secrets - gitleaks
-* SAST - SonarCloud
-* SCA - Snyk
+* SAST - SonarCloud; Review code smells and security issues
+* SCA - Snyk; review security issues
 * Run checks in parallel
+* Practice PR - see results
 
 ## Build and upload
 
