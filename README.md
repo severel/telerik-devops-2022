@@ -57,3 +57,4 @@ Feel free to fork this repository and work in the forked version.
 * Commit signature verification
 * Sign container images
 * Use security hardened base image - CIS
+* create PR templates
