@@ -54,3 +54,6 @@ Feel free to fork this repository and work in the forked version.
 * Measure Lead time
 * Add GitHub self-hosted runner
 * Add Chat notifications
+* Commit signature verification
+* Sign container images
+* Use security hardened base image - CIS
