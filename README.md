@@ -28,9 +28,9 @@ Feel free to fork this repository and work in the forked version.
 * Run only on the main branch
 * Build Docker
 * Scan the docker - trivy / snyk
-* Push the Docker image - set immutable tag?
-* Set immutable tag
-* Security scan in repository - periodic
+* Push the Docker image
+* Set immutable tag?
+* Security scan in repository - periodic scans?
 
 ## Test database changes
 
