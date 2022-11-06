@@ -1,0 +1,86 @@
+name: Integration (Automatic)
+
+on: [push]
+# on:
+# push:
+#   branches:
+#     - main
+#     - "release/**"
+# pull_request:
+#   types: [opened, synchronize, reopened]
+#   branches: [main, release/**]
+
+jobs:
+  # spell-check:
+  #   name: spell check
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #     - run: npx cspell --no-progress "**/*"
+  # git-leaks:
+  #   name: secrets detection
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #       with:
+  #         fetch-depth: "2"
+  #     - uses: zricethezav/gitleaks-action@master
+  editorconfig-check:
+    name: .editorconfig lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: editorconfig-checker/action-editorconfig-checker@v1
+  markdown-lint:
+    name: markdown lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: npx markdownlint-cli **/*.md
+
+  # publish:
+  #   name: build and push docker
+  #   # needs:
+  #   runs-on: ubuntu-latest
+  #   # strategy:
+  #   #   matrix:
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #     - name: Log into registry ${{ env.REGISTRY }}
+  #       uses: docker/login-action@v1
+  #       with:
+  #         registry: ${{ env.REGISTRY }}
+  #         username: ${{ github.actor }}
+  #         password: ${{ secrets.GITHUB_TOKEN }}
+  #     - name: Extract Docker metadata
+  #       id: meta
+  #       uses: docker/metadata-action@v3
+  #       with:
+  #         images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}/${{ matrix.services.imageName }}
+  #         tags: |
+  #           type=semver,pattern={{version}}
+  #           type=semver,pattern={{major}}.{{minor}}
+  #           type=semver,pattern={{major}}
+  #           type=ref,event=branch
+  #           type=sha
+  #     - name: Build and push Docker image
+  #       uses: docker/build-push-action@v2
+  #       with:
+  #         context: ./src
+  #         file: ${{ matrix.services.file }}
+  #         push: ${{ github.event_name != 'pull_request' }}
+  #         tags: ${{ steps.meta.outputs.tags }}
+  #         labels: ${{ steps.meta.outputs.labels }}
+  #     - name: Output image tag
+  #       id: image-tag
+  #       run: echo "::set-output name=image-${{ matrix.services.imageName }}::${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}/${{ matrix.services.imageName }}:sha-$(git rev-parse --short HEAD)" | tr '[:upper:]' '[:lower:]'
+  #     - run: echo IMAGE_NAMElower=$(echo ${{ github.repository }} | tr '[:upper:]' '[:lower:]') >> $GITHUB_ENV
+  #     - name: Run Trivy vulnerability scanner
+  #       uses: aquasecurity/trivy-action@master
+  #       with:
+  #         image-ref: ${{ env.REGISTRY }}/${{ env.IMAGE_NAMElower }}/${{ matrix.services.imageName }}:main
+  #         format: "table"
+  #         exit-code: "1"
+  #         ignore-unfixed: true
+  #         vuln-type: "os,library"
+  #         severity: "CRITICAL,HIGH"

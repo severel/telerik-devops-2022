@@ -14,6 +14,7 @@ Feel free to fork this repository and work in the forked version.
 ## Check for every feature branch
 
 * Code lint and style
+* Code unit tests
 * Check .editorconfig
 * Check for hardcoded secrets
 * SAST - SonarCloud
