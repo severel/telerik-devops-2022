@@ -13,10 +13,10 @@ Feel free to fork this repository and work in the forked version.
 
 ## Check for every feature branch
 
+* Check .editorconfig
 * Code lint and style
 * Code unit tests
-* Check .editorconfig
-* Check for hardcoded secrets
+* Check for hardcoded secrets - gitleaks
 * SAST - SonarCloud
 * SCA - Snyk
 * Run checks in parallel
