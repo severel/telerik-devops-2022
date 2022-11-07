@@ -3,7 +3,7 @@ from flask import Flask
 app = Flask(__name__)
 
 final_list = []
-aws_secret = "AKIAIMNOJVGFDXXXE4OA"
+aws_secret = "AKIAIMNOJVGFDXXXE4OAa"
 stripe = "sk_live_z6Wgj3W5n3eYSLEKPRJ4OrE900vpjOnFhP"
 
 
