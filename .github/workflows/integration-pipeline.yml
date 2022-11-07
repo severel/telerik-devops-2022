@@ -72,18 +72,18 @@ jobs:
   #          pytest
   #          # fails because there are not active tests
 
-#  git-leaks:
-#    name: secrets detection
-#    runs-on: ubuntu-latest
-#    steps:
-#      - uses: actions/checkout@v3
-#        with:
-#          fetch-depth: 2
-#      - uses: gitleaks/gitleaks-action@v2
-#        env:
-#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #  git-leaks:
+  #    name: secrets detection
+  #    runs-on: ubuntu-latest
+  #    steps:
+  #      - uses: actions/checkout@v3
+  #        with:
+  #          fetch-depth: 2
+  #      - uses: gitleaks/gitleaks-action@v2
+  #        env:
+  #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-# Build
+  # Build
   push_to_registry:
     needs: [ editorconfig-check ]
     name: Push Docker image to Docker Hub
@@ -113,14 +113,14 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-      # - name: Run Trivy vulnerability scanner
-      #   uses: aquasecurity/trivy-action@master
-      #   with:
-      #     image-ref: "severel/aptest:sha-${{ github.sha }}"
-      #     format: "table"
-      #     exit-code: "1"
-      #     ignore-unfixed: true
-      #     vuln-type: "os,library"
-      #     severity: "CRITICAL,HIGH"
-#    Test
+      - name: Run Trivy vulnerability scanner
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: "sashoto/wip-2022-10-07:sha-${{ github.sha }}"
+          format: "table"
+          exit-code: "1"
+          ignore-unfixed: true
+          vuln-type: "os,library"
+          severity: "CRITICAL,HIGH"
+  #    Test
   # Deploy
