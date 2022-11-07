@@ -83,7 +83,7 @@ jobs:
 #        env:
 #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-  # Build
+# Build
   push_to_registry:
     needs: [ editorconfig-check ]
     name: Push Docker image to Docker Hub
