@@ -194,7 +194,9 @@ jobs:
 
       - name: App Runner output
         run: echo "App runner output ${{ steps.deploy-apprunner.outputs.service-id }}"
+
   zap_scan:
+    needs: [deploy]
     runs-on: ubuntu-latest
     name: Scan the webapplication
     steps:
