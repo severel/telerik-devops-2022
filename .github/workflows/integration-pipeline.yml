@@ -150,6 +150,8 @@ jobs:
   deploy:
     needs: [editorconfig-check]
     runs-on: ubuntu-latest
+    outputs:
+      service-url: ${{ steps.deploy-apprunner.outputs.service-url }}
 
     steps:
       - name: Checkout
@@ -206,6 +208,6 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           docker_name: "owasp/zap2docker-stable"
-          target: "https://${{ steps.deploy-apprunner.outputs.service-url }}"
+          target: "https://${{ needs.deploy.outputs.service-url }}"
           rules_file_name: ".zap/rules.tsv"
           cmd_options: "-a"

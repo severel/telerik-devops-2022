@@ -58,6 +58,7 @@ Feel free to fork this repository and work in the forked version.
 * Commit signature verification
 * Sign container images
 * Use security hardened base image - CIS
+* Use alternative Docker repositories - <https://gallery.ecr.aws>
 * Create PR templates
 * Rewrite all steps to be command lines instead of GitHub Actions
 * Repeat the same steps in GitLab CI, Azure DevOps or BitBucket
