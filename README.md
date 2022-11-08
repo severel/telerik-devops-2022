@@ -60,3 +60,9 @@ Feel free to fork this repository and work in the forked version.
 * Sign container images
 * Use security hardened base image - CIS
 * create PR templates
+
+## Setup AWS account
+
+* Create AWS account - <https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/>
+* Redeem credits - <https://aws.amazon.com/awscredits/>
+* Set Budget alarm - <https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/monitor_estimated_charges_with_cloudwatch.html>
