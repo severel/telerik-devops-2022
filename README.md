@@ -51,7 +51,6 @@ Feel free to fork this repository and work in the forked version.
 * Integration test
 * Infrastructure test
 * More code quality tests
-* Matrix build
 * GitHub issues integration
 * Measure Lead time
 * Add GitHub self-hosted runner
