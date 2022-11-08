@@ -148,6 +148,7 @@ jobs:
   # Test
   # Deploy
   deploy:
+    needs: [editorconfig-check]
     runs-on: ubuntu-latest
 
     steps:
@@ -193,7 +194,7 @@ jobs:
           port: 5000
 
       - name: App Runner output
-        run: echo "App runner output ${{ steps.deploy-apprunner.outputs.service-id }}"
+        run: echo "App runner output ${{ steps.deploy-apprunner.outputs.service-url }}"
 
   zap_scan:
     needs: [deploy]
@@ -205,6 +206,6 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           docker_name: "owasp/zap2docker-stable"
-          target: "${{ steps.deploy-apprunner.outputs.service-id }}"
+          target: "${{ steps.deploy-apprunner.outputs.service-url }}"
           rules_file_name: ".zap/rules.tsv"
           cmd_options: "-a"
