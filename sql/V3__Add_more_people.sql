@@ -1,1 +1,1 @@
-insert into PERSON (ID, NAME) values (3, 'Ms. Smith');
+insert into PERSON2 (ID, NAME) values (3, 'Ms. Smith');
