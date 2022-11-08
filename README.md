@@ -44,7 +44,7 @@ Feel free to fork this repository and work in the forked version.
 
 * Deploy to UAT
 * DAST - ZAP
-* SSL Check - sslyze
+* SSL Check - ssllabs
 
 ## Additional
 
