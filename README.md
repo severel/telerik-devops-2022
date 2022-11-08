@@ -61,6 +61,7 @@ Feel free to fork this repository and work in the forked version.
 * Use security hardened base image - CIS
 * Create PR templates
 * Rewrite all steps to be command lines instead of GitHub Actions
+* Repeat the same steps in GitLab CI, Azure DevOps or BitBucket
 
 ## Setup AWS account
 
