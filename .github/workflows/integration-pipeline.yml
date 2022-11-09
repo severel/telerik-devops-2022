@@ -160,7 +160,7 @@ jobs:
       - run: echo "SCA"
   # Test
   # Deploy
-  deploy:
+  deploy-uat:
     needs: [sast, sca]
     runs-on: ubuntu-latest
     outputs:
@@ -212,7 +212,27 @@ jobs:
         run: echo "App runner output ${{ steps.deploy-apprunner.outputs.service-url }}"
 
   zap_scan:
-    needs: [deploy]
+    needs: [deploy-uat]
+    runs-on: ubuntu-latest
+    name: Scan the webapplication
+    steps:
+      - name: ZAP Scan
+        uses: zaproxy/action-full-scan@v0.4.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          docker_name: "owasp/zap2docker-stable"
+          target: "https://${{ needs.deploy.outputs.service-url }}"
+          rules_file_name: ".zap/rules.tsv"
+          cmd_options: "-a"
+
+  deploy-prod:
+    needs: [zap_scan]
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "deploy-prod"
+
+  zap_scan_prod:
+    needs: [deploy-uat]
     runs-on: ubuntu-latest
     name: Scan the webapplication
     steps:
