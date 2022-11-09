@@ -232,7 +232,7 @@ jobs:
       - run: echo "deploy-prod"
 
   zap_scan_prod:
-    needs: [deploy-uat]
+    needs: [deploy-prod]
     runs-on: ubuntu-latest
     name: Scan the webapplication
     steps:
