@@ -146,10 +146,22 @@ jobs:
           user: user
           password: password
       - run: echo 'testing'
+
+  sast:
+    needs: [database_test]
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "SAST"
+
+  sca:
+    needs: [database_test]
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "SCA"
   # Test
   # Deploy
   deploy:
-    needs: [database_test]
+    needs: [sast, sca]
     runs-on: ubuntu-latest
     outputs:
       service-url: ${{ steps.deploy-apprunner.outputs.service-url }}
