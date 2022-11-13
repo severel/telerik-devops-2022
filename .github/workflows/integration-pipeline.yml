@@ -18,12 +18,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: editorconfig-checker/action-editorconfig-checker@v1
-  markdown-lint:
-    name: markdown lint
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - run: npx markdownlint-cli **/*.md
+  # markdown-lint:
+  #   name: markdown lint
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #     - run: npx markdownlint-cli **/*.md
 
   # linter:
   #   runs-on: ubuntu-latest
