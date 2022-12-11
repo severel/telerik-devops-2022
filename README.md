@@ -90,7 +90,7 @@ Feel free to fork this repository and work in the forked version.
   * Terraform best practices book - <https://www.terraform-best-practices.com/>
   * IaC layers - CloudFormation best practices - <https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#organizingstacks>
   * Review Ivo's code -
-  * Review Hristo's code -
+  * Review Hristo's code - <https://github.com/voyvodov/devops-academy-demo/>
   * Terraform orchestration
   * SAST - checkov - <https://www.checkov.io/2.Basics/Installing%20Checkov.html> 'checkov -d .'
   * Terraform pipeline
