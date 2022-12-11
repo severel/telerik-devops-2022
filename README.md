@@ -92,7 +92,7 @@ Feel free to fork this repository and work in the forked version.
   * Terraform orchestration
   * SAST - checkov - <https://www.checkov.io/2.Basics/Installing%20Checkov.html> 'checkov -d .'
   * Terraform pipeline - Terraform pipeline.png
-  * Cost - InfraCost
+  * Cost - InfraCost - <https://www.infracost.io>
   * Multiple environments
   * Terraform workspaces - <https://developer.hashicorp.com/terraform/language/state/workspaces>
   * Terraform providers - <https://registry.terraform.io/browse/providers>
