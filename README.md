@@ -88,12 +88,10 @@ Feel free to fork this repository and work in the forked version.
   * Change the backend to S3
   * Terraform Up and Running - <https://www.amazon.com/Terraform-Running-Writing-Infrastructure-Code/dp/1098116747>
   * Terraform best practices book - <https://www.terraform-best-practices.com/>
-  * IaC layers - CloudFormation best practices - <https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#organizingstacks>
-  * Review Ivo's code -
-  * Review Hristo's code - <https://github.com/voyvodov/devops-academy-demo/>
+  * IaC layers - IaC layers.png ; CloudFormation best practices - <https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#organizingstacks>
   * Terraform orchestration
   * SAST - checkov - <https://www.checkov.io/2.Basics/Installing%20Checkov.html> 'checkov -d .'
-  * Terraform pipeline
+  * Terraform pipeline - Terraform pipeline.png
   * Cost - InfraCost
   * Multiple environments
   * Terraform workspaces - <https://developer.hashicorp.com/terraform/language/state/workspaces>
@@ -101,3 +99,4 @@ Feel free to fork this repository and work in the forked version.
   * Terraform provider version lock
   * Terraform registry - <https://registry.terraform.io/>
   * Are all resources supported by the terraform providers?
+  * Review Hristo's code - <https://github.com/voyvodov/devops-academy-demo/>
