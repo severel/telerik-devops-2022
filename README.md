@@ -100,3 +100,4 @@ Feel free to fork this repository and work in the forked version.
   * Terraform registry - <https://registry.terraform.io/>
   * Are all resources supported by the terraform providers?
   * Review Hristo's code - <https://github.com/voyvodov/devops-academy-demo/>
+  * CDK / Pulumi - <https://github.com/severel/aws-cdk-cis/blob/main/aws-cdk-cis/aws_cdk_cis/aws_cdk_cis_stack.py>
