@@ -77,7 +77,7 @@ Feel free to fork this repository and work in the forked version.
 * Terraform
   * Install Terraform - <https://developer.hashicorp.com/terraform/downloads>
   * Install AWS CLI - <https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html> 'aws sts get-caller-identity'
-  * Create EC2
+  * Create EC2 - <https://developer.hashicorp.com/terraform/tutorials/aws-get-started/aws-build>
   * Destroy EC2
   * Script vs Terraform - <https://blog.gruntwork.io/why-we-use-terraform-and-not-chef-puppet-ansible-saltstack-or-cloudformation-7989dad2865c>
   * OS vs Infrastructure configuration
@@ -85,13 +85,14 @@ Feel free to fork this repository and work in the forked version.
   * Files structure
   * Modules
   * Terraform backends - <https://developer.hashicorp.com/terraform/language/settings/backends/s3>
+  * Change the backend to S3
   * Terraform Up and Running - <https://www.amazon.com/Terraform-Running-Writing-Infrastructure-Code/dp/1098116747>
   * Terraform best practices book - <https://www.terraform-best-practices.com/>
-  * IaC layers - Cloudformation best practices
+  * IaC layers - CloudFormation best practices - <https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#organizingstacks>
   * Review Ivo's code -
   * Review Hristo's code -
   * Terraform orchestration
-  * SAST - checkov
+  * SAST - checkov - <https://www.checkov.io/2.Basics/Installing%20Checkov.html> 'checkov -d .'
   * Terraform pipeline
   * Cost - InfraCost
   * Multiple environments
