@@ -102,3 +102,4 @@ Feel free to fork this repository and work in the forked version.
   * Review Hristo's code - <https://github.com/voyvodov/devops-academy-demo/>
   * CDK / Pulumi - <https://github.com/severel/aws-cdk-cis/blob/main/aws-cdk-cis/aws_cdk_cis/aws_cdk_cis_stack.py>
   * IaC automated testing
+  * IaC long term support
