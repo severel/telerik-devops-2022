@@ -103,3 +103,4 @@ Feel free to fork this repository and work in the forked version.
   * CDK / Pulumi - <https://github.com/severel/aws-cdk-cis/blob/main/aws-cdk-cis/aws_cdk_cis/aws_cdk_cis_stack.py>
   * IaC automated testing
   * IaC long term support
+  * CKAD - <https://github.com/dgkanatsios/CKAD-exercises>
